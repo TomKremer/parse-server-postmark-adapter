@@ -1,0 +1,46 @@
+{
+  "name": "parse-server-postmark-adapter",
+  "version": "0.0.0",
+  "description": "Used to send Parse Server password reset and email verification emails through Postmark",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src -d lib",
+    "lint": "eslint src --ignore-path .gitignore",
+    "prebuild": "npm run lint",
+    "prepublish": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glennreyes/parse-server-postmark-adapter.git"
+  },
+  "keywords": [
+    "parse",
+    "parse-server",
+    "email-adapter",
+    "postmark"
+  ],
+  "author": "Glenn Reyes <glenn@glennreyes.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/glennreyes/parse-server-postmark-adapter/issues"
+  },
+  "homepage": "https://github.com/glennreyes/parse-server-postmark-adapter#readme",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "dependencies": {
+    "postmark": "^1.2.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.10.4",
+    "babel-preset-es2015": "^6.9.0",
+    "eslint": "^2.13.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.9.2",
+    "eslint-plugin-jsx-a11y": "^1.5.3",
+    "eslint-plugin-react": "^5.2.2"
+  }
+}
