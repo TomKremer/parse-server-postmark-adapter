@@ -27,8 +27,7 @@
   },
   "homepage": "https://github.com/glennreyes/parse-server-postmark-adapter#readme",
   "files": [
-    "lib",
-    "src"
+    "lib"
   ],
   "dependencies": {
     "postmark": "^1.2.1"
