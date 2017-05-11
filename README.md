@@ -48,18 +48,18 @@ const server = new ParseServer({
     customUserAttributesMergeTags: ['firstname', 'lastname'],
 
     //
-    // The name of your Mandrill template for the password reset email:
+    // The name of your Postmark template for the password reset email:
     // If you add this attribute, then passwordResetBody will be ignored.
     // IMPORTANT: Make sure the email has the *|link|* merge tag,
     //            it will render the url to reset the password.
-    passwordResetTemplateId: 'password-reset-template-name',
+    passwordResetTemplateId: 'password-reset-template-id',
 
     //
-    // The name of your Mandrill template for the verification email:
+    // The name of your Postmark template for the verification email:
     // If you add this attribute, then verificationBody will be ignored.
     // IMPORTANT: Make sure the email has the *|link|* merge tag,
     //            it will render the url to verify the user.
-    verificationTemplateId: 'email-verification-template-name',
+    verificationTemplateId: 'email-verification-template-id',
   }),
 });
 
