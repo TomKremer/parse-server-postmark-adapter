@@ -1,7 +1,6 @@
-/*eslint-disable*/
-
 import postmark from 'postmark';
 
+/*eslint-disable*/
 const PostmarkAdapter = postmarkOptions => {
   if (
     !postmarkOptions ||
@@ -163,6 +162,6 @@ const PostmarkAdapter = postmarkOptions => {
     sendMail: sendMail
   });
 }
+/*eslint-enable*/
 
 module.exports = PostmarkAdapter;
-/*eslint-enable*/
