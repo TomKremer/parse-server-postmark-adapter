@@ -1,4 +1,6 @@
-import postmark from 'postmark';
+//import postmark from 'postmark';
+const postmark = require("postmark");
+
 
 /*eslint-disable*/
 const PostmarkAdapter = postmarkOptions => {
@@ -33,7 +35,7 @@ const PostmarkAdapter = postmarkOptions => {
   postmarkOptions.customUserAttributesMergeTags =
     postmarkOptions.customUserAttributesMergeTags || [];
 
-  const postmarkClient = new postmark.ServerClient(apiKey);
+  const postmarkClient = new postmark.ServerClient(postmarkOptions.apiKey);
 
   var sendVerificationEmail = options => {
     var messageData = {
