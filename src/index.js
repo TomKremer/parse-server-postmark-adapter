@@ -1,13 +1,14 @@
+/*eslint-disable*/
+
 import postmark from 'postmark';
 
 const PostmarkAdapter = postmarkOptions => {
-
   if (
     !postmarkOptions ||
     !postmarkOptions.apiKey ||
     !postmarkOptions.fromAddress
   ) {
-    throw 'PostmarkAdapter requires an API Key and a From Email Address.';
+    throw new Error('PostmarkAdapter requires an API Key and a From Email Address.');
   }
 
   postmarkOptions.replyTo =
@@ -30,7 +31,8 @@ const PostmarkAdapter = postmarkOptions => {
     postmarkOptions.passwordResetBody ||
     'Hi,\n\nYou requested a password reset for *|appname|*.\n\nClick here ' +
     'to reset it:\n*|link|*';
-  postmarkOptions.customUserAttributesMergeTags = postmarkOptions.customUserAttributesMergeTags || [];
+  postmarkOptions.customUserAttributesMergeTags =
+    postmarkOptions.customUserAttributesMergeTags || [];
 
   const postmarkClient = new postmark.ServerClient(apiKey);
 
@@ -163,3 +165,4 @@ const PostmarkAdapter = postmarkOptions => {
 }
 
 module.exports = PostmarkAdapter;
+/*eslint-enable*/
