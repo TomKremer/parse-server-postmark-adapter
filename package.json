@@ -27,7 +27,8 @@
   },
   "homepage": "https://github.com/TomKremer/parse-server-postmark-adapter#readme",
   "files": [
-    "lib"
+    "lib",
+    "src"
   ],
   "dependencies": {
     "postmark": "^2.3.4"
