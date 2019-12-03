@@ -1,4 +1,4 @@
-import { Postmark } from 'postmark';
+import postmark from 'postmark';
 
 const PostmarkAdapter = postmarkOptions => {
 
@@ -32,13 +32,13 @@ const PostmarkAdapter = postmarkOptions => {
     'to reset it:\n*|link|*';
   postmarkOptions.customUserAttributesMergeTags = postmarkOptions.customUserAttributesMergeTags || [];
 
-  const postmarkClient = new Postmark(apiKey);
+  const postmarkClient = new postmark.ServerClient(apiKey);
 
   var sendVerificationEmail = options => {
     var messageData = {
       appname: options.appName,
       username: options.user.get("username"),
-      email: options.user.get("email"),
+      email: options.user.get("username"),
       link: options.link
     }
 
@@ -89,7 +89,7 @@ const PostmarkAdapter = postmarkOptions => {
     var messageData = {
       appname: options.appName,
       username: options.user.get("username"),
-      email: options.user.get("email"),
+      email: options.user.get("username"),
       link: options.link
     }
 
