@@ -107,7 +107,7 @@ const PostmarkAdapter = postmarkOptions => {
         var message = {
           From: postmarkOptions.fromAddress,
           To: options.user.get("email") || options.user.get("username"),
-          Subject: postmarkOptions.passwordResetSubject,
+          /*Subject: postmarkOptions.passwordResetSubject,*/
           TemplateId: postmarkOptions.passwordResetTemplateId,
           TemplateModel: messageData
         }
@@ -123,8 +123,8 @@ const PostmarkAdapter = postmarkOptions => {
         var message = {
           From: postmarkOptions.fromAddress,
           To: options.to,
-          Subject: options.subject,
-          TextBody: options.text
+          /*Subject: options.subject,
+          TextBody: options.text*/
         }
         postmarkClient.sendEmail(message,
           function (error, result) {
