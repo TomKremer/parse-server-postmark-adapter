@@ -1,6 +1,6 @@
 {
   "name": "parse-server-postmark-adapter",
-  "version": "2.3.5",
+  "version": "2.3.9",
   "description": "Used to send Parse Server password reset and email verification emails through Postmark",
   "main": "lib/index.js",
   "scripts": {
@@ -8,7 +8,8 @@
     "lint": "eslint src --ignore-path .gitignore",
     "prebuild": "npm run lint",
     "prepublish": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
