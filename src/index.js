@@ -158,10 +158,34 @@ const PostmarkAdapter = postmarkOptions => {
     });
   }
 
+  var sendMailTemplate = options => {
+
+    var message = {
+      From: postmarkOptions.fromAddress,
+      To: options.to,
+      TemplateId: options.templateId,
+      TemplateModel: options.templateModel
+    }
+
+    return new Promise((resolve, reject) => {
+
+      postmarkClient.sendEmailWithTemplate(message,
+        function (error, result) {
+          if (error) {
+            console.error("Unable to send via postmark: " + error.message);
+            return;
+          }
+          console.info("Sent to postmark for delivery")
+        });
+
+    });
+  }
+
   return Object.freeze({
     sendVerificationEmail: sendVerificationEmail,
     sendPasswordResetEmail: sendPasswordResetEmail,
-    sendMail: sendMail
+    sendMail: sendMail,
+    sendMailTemplate: sendMailTemplate
   });
 }
 /*eslint-enable*/
