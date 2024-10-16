@@ -1,6 +1,6 @@
 {
   "name": "parse-server-postmark-adapter",
-  "version": "2.3.17",
+  "version": "3.0.0'",
   "description": "Used to send Parse Server password reset and email verification emails through Postmark",
   "main": "lib/index.js",
   "scripts": {
@@ -30,7 +30,7 @@
     "lib"
   ],
   "dependencies": {
-    "postmark": "^2.3.4"
+    "postmark": "^4.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.7.4",
